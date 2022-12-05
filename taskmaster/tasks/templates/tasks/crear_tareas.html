@@ -1,0 +1,34 @@
+{% extends 'tasks/base.html' %} 
+
+{% block titulo %}
+Crear tareas
+{% endblock titulo %}
+
+
+{% block content %}
+
+<h1 style="color: rgb(1, 1, 70);"> 
+  ¿Qué nuevas tareas me traes hoy?
+</h1>
+<h2> 
+  Escribe en este cuadro de texto las tareas que quieras añadir a la lista. Cada salto de linea en el cuadro será una tarea diferente. 
+</h2>
+<h2>
+  Cuando hayas terminado de escribir todas pulsa el botón "Crear tareas".
+</h2>
+<h2>
+  ¡Ánimo con los quehaceres!
+</h2>
+<form action="{% url 'crear_tareas' %}" method="POST">
+    {% csrf_token %}
+    <table class="table">
+    
+        {{ form.as_table }}
+    
+    </table>
+      <p>
+        <input type="submit" name="ok" value="Crear tareas">
+      </p>
+    </form>
+
+{% endblock content %}

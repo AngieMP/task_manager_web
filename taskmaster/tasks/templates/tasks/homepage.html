@@ -1,0 +1,11 @@
+{% extends 'tasks/base.html' %}
+
+
+{% block content %}
+<p>Hecho con <a href="http://python.org/">Python</a>.</p>
+    
+<p>Hoy es <strong>{{ fecha }}</strong></p>
+    
+{% include 'tasks/includes/task_table.html' %}
+
+{% endblock content %}

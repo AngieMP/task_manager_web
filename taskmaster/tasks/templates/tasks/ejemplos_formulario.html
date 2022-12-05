@@ -1,0 +1,59 @@
+<form action="{% url 'buscar' %}" method="POST">
+
+    <p>
+      <select name="orden">
+          Orden:
+          <option value="1">Primero</option>
+          <option value="2">Segundo</option>
+          <option value="3">Tercero</option>
+      </select>
+    </p>
+    <p>Prioridad:
+      <input type="radio" name="priority" id="pri-low" value="L">
+          <label for="pri-low">Baja</label>
+      <input type="radio" id="pri-normal" name="priority" value="N">
+          <label for="pri-normal">Normal</label>
+      <input disabled="True" type="radio" name="priority" id="pri-high" value="H">
+          <label for="pri-high">Alta</label>
+    </p>  
+  
+    <p>Comentario
+      <textarea name="comentario">
+          Escriba aquí su opinión, aunque a nadie le importe
+      </textarea>
+    </p>
+  
+      Nombre:
+      <input type="text" name="nombre">
+      <br>
+      Search:
+      <input type="search" name="query">
+      <br>
+      Contraseña:
+      <input type="password" name="contraseña">
+      <br>
+      Fecha:
+      <input type="date" name="fecha">
+      <br>
+      Correo:
+      <input type="email" name="correo">
+      <br>
+      Teléfono:
+      <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+      <br>
+      Telefonocutre:
+      <input type="number" name="teléfono">
+      <br>
+      URL:
+      <input type="url" name="url">
+      <br>
+      Hora:
+      <input type="time" name="hora">
+      <br>
+      Color:
+      <input type="color" name="color">
+  
+    <br>
+    <input type="submit" name="Enviar">
+      
+  </form>
